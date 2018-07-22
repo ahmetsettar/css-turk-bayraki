@@ -1,0 +1,187 @@
+/* Bayrak kodu CSS3 başlangıç */
+.olculer {
+  --a: calc((var(--g) / 2) - (var(--b) / 2) + var(--m));
+  --b: calc(var(--g) / 2);
+  --c: calc(var(--a) + (var(--g) * 0.0625) + ((var(--b) - var(--d)) / 2));
+  --d: calc((var(--g) / 10) * 4);
+  --e: calc(var(--c) + (var(--g) / 3));
+  --f: calc(var(--g) / 4);
+  --g: 400px;
+  --l: calc(var(--g) * 1.5);
+  --m: calc(var(--g) / 30);
+}
+
+.turkiye {
+  background: #e4030f;
+  background: linear-gradient(
+    to left,
+    #e4030f calc(100% - var(--m)),
+    #ffffff var(--m)
+  );
+  position: relative;
+}
+
+.turkiye:before,
+.turkiye:after {
+  content: "";
+  position: absolute;
+}
+
+.turkiye:before {
+  background: #ffffff;
+  width: var(--b);
+  height: var(--b);
+  border-radius: 50%;
+  left: var(--a);
+  top: calc((var(--g) - var(--b)) / 2);
+}
+
+.turkiye:after {
+  background: rgb(228, 3, 15);
+  width: var(--d);
+  height: var(--d);
+  border-radius: 50%;
+  left: var(--c);
+  top: calc((var(--g) - var(--d)) / 2);
+}
+
+.turkiye .yildiz {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: var(--f);
+  height: var(--f);
+  background-color: white;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  left: var(--e);
+  top: calc((var(--g) - var(--f)) / 2);
+  transform: rotate(-90deg) scale(1);
+}
+
+.bayrak {
+  width: var(--l);
+  height: var(--g);
+  margin: 10px auto 10px auto;
+}
+/* Bayrak kodu CSS3 bitiş */
+
+.olc {
+  color: white;
+  text-align: center;
+  height: 20px;
+  margin-left: var(--m);
+  position: relative;
+}
+#a.olc {
+  width: var(--a);
+  background-color: #e91e63;
+}
+#b.olc {
+  width: var(--b);
+  background-color: #fac;
+}
+#c.olc {
+  width: var(--c);
+  background-color: #bac;
+}
+#d.olc {
+  width: var(--d);
+  background-color: #adb;
+}
+#e.olc {
+  width: var(--e);
+  background-color: #ad2;
+}
+#f.olc {
+  width: var(--f);
+  background-color: #fea;
+}
+#l.olc {
+  width: var(--l);
+  background-color: #ffc107;
+}
+#m.olc {
+  width: var(--m);
+  background-color: #03a9f4;
+}
+.olc > span {
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.test {
+  display: none;
+  margin-top: 100px;
+  margin-left: calc(var(--m) + 347px);
+  width: 1px;
+  height: 220px;
+  background: black;
+  position: absolute;
+  top: 230px;
+  z-index: 20;
+}
+
+.test2 {
+  display: none;
+  margin-top: 263px;
+  margin-left: calc(var(--m) + 8px);
+  width: calc(var(--g) * 0.0625);
+  height: 2px;
+  background-color: green;
+  position: absolute;
+  top: 170px;
+  left: 250px;
+  z-index: 22;
+}
+
+.test3 {
+  display: none;
+  margin-top: 263px;
+  margin-left: calc(var(--m) + -61px);
+  width: calc(var(--g) / 3);
+  height: 2px;
+  background-color: #d2c110;
+  position: absolute;
+  top: 170px;
+  left: 250px;
+  z-index: 10;
+}
+
+body {
+  background-color: #222;
+}
+.baslik-aciklama {
+  background-color: #222222;
+  color: #ecf0f1;
+  text-align: center;
+  font-family: Trebuchet, Arial, sans-serif;
+  padding: 5px;
+  margin: 5px;
+}
